@@ -25,19 +25,82 @@
     
     </div>
 </div>
-<div class="testo"> <form action="/url" method="GET">
+<div class="testo"> 
     <p><mark>Inserisci nome e cognome del capo stagista:</mark></p>
-    <input type="text" placeholder="Nome">
-    <input type="text" placeholder="Cognome">
-</form></div>
+    <input id="form1" placeholder="Nome">
+    <input id="form2" placeholder="Cognome">
+    <button class="bottone" onclick="stampa()"> Invia </button>
+</div>
 
-
-
-
-
-
-
+<div class="nc">
+    <p id="stampaNome"></p>
+    <p id="stampaCognome"></p>
+</div>
+<button class="bottone" onclick="reset()"> Reset </button>
+<div class="color" id="message" >
+    <p class="corretto" id="corretto">Dati inviati correttamente</p>
+</div>
+<div class="stampa" id="box">
+    <p id="n1" ></p> <p id="n2"></p>
+</div>
 </body>
 
-</head>
+
+
+
+<script>
+    function stampa(){
+        const nome = document.getElementById("form1").value;
+        const cognome = document.getElementById("form2").value;
+        const printnome= document.getElementById("stampaNome").innerHTML=nome;
+        const printcognome= document.getElementById("stampaCognome").innerHTML=cognome;
+        const div=document.getElementById("box");
+            const alert=document.getElementById("message");
+            if (div.style.display === "none") {
+                div.style.display = "block";
+                alert.style.display= "block";
+            } else {
+                div.style.display = "none";
+                alert.style.display= "none";
+            }
+
+            if (alert.style.display == "none"){
+                alert.style.display = "block"
+            }
+    }
+</script>
+
+
+<script>
+
+function reset(){
+        
+         document.getElementById("stampaNome").innerHTML="";
+         document.getElementById("stampaCognome").innerHTML="";
+        //  const printname=document.getElementById("n1").innerHTML=nome;
+        //  const printsurname=document.getElementById("n2").innerHTML=cognome;
+         const div=document.getElementById("box");
+         const alert=document.getElementById("message");
+         console.log(alert.style.display)
+         if (div.style.display === "none") {
+                div.style.display = "block";  
+         }else {
+            div.style.display="none";
+
+         } if(alert.style.display==="none"){
+                alert.style.display="block";
+         }else {
+            alert.style.display="none";
+
+         }
+         this.valueChange()
+  
+
+         }
+               
+
+
+</script>
+
+
 </html>
