@@ -9,7 +9,7 @@
         <p class="descrizione">In questa pagina mostreremo cosa abbiamo studiato durante quest'anno.</p>
         <div class="elenco">
         <ul>
-            <li>Ripasso sul linguaggio programmazione C++></li>
+            <li>Ripasso sul linguaggio programmazione C++</li>
             <li>Studio delle classi</li>
             <li>Studio HTML</li>
             <li>Studio CSS</li>
@@ -29,5 +29,47 @@
             <img src="immagini/solimene.jpg" class="immage">
             <img src="immagini/sw.png" class="immageIcubed">
         </div>
+
+
+        <div class="programma2">
+                <div class="form">
+                    <p> Nome : <input id="p1" type="text" name="nome"> </p>
+                    <p> Cognome : <input id="p2" type="text" name="cognome"> </p>
+                    <button id="button" onclick="stampa(), messaggio()">Invia!</button>
+                    <button id="button" onclick="reset()">Reinserisci</button>
+                </div>
+                
+                <div class="stampa">
+                    <p>Il tuo nome e il tuo cognome:</p>
+                    <p id="stampaNome"></p>
+                    <p id="stampaCognome"></p>
+                    <p id="stampaMessaggio"></p>
+                </div>
+        
+        </div>
+
+        </div>
+
+     
+
+        <script>
+            function stampa() {
+                const Nome= document.getElementById("p1").value
+                const Cognome= document.getElementById("p2").value
+                console.log("Il capo stagista è " + Nome + " " + Cognome)
+                document.getElementById("stampaNome").innerHTML=Nome
+                document.getElementById("stampaCognome").innerHTML=Cognome
+            }
+            function reset() {
+                document.getElementById("stampaNome").innerHTML=''
+                document.getElementById("stampaCognome").innerHTML=''
+                document.getElementById("stampaMessaggio").innerHTML=" " 
+
+            }
+            function messaggio(){
+                document.getElementById("stampaMessaggio").innerHTML="Dati inviati corretamente 😁" 
+
+            }
+            </script>
     </body>
 </html>
