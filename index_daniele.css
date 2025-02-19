@@ -36,7 +36,6 @@
 }
 
 .immageIcubed{
-    text-align: center;
     height: 100px;
     border: 8px solid black;
     margin: 5px;
@@ -50,4 +49,32 @@
     background-color: cornflowerblue;
     border: 10px solid blue;
     margin:25px;
+    
+}
+.programma2{
+    color: white;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    background-color: cornflowerblue;
+    border: 10px solid blue;
+    margin:25px;
+    
+}
+.stampa{
+    
+    color: white;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: cornflowerblue;
+    border: 5px solid black;
+    margin:25px;
+
+}
+
+
+#button{
+    height: 20px;
 }
