@@ -56,12 +56,17 @@
                 document.getElementById("stampaNome").innerHTML=Nome
                 document.getElementById("stampaCognome").innerHTML=Cognome
             }
+            
             function reset() {
+                var nome = document.getElementById("p1");
+                var cognome = document.getElementById("p2");
+                nome.value = ''
+                cognome.value = ''
                 document.getElementById("stampaNome").innerHTML=''
                 document.getElementById("stampaCognome").innerHTML=''
-                document.getElementById("stampaMessaggio").innerHTML=" " 
-
+                document.getElementById("stampaMessaggio").innerHTML=''
             }
+
             function messaggio(){
                 document.getElementById("stampaMessaggio").innerHTML="Dati inviati corretamente 😁" 
 
