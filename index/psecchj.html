@@ -33,15 +33,19 @@
         </div>
 
         <div class="form">
-            <input   id="nome" type="text" placeholder="Nome"> 
-            <input   id="cognome" type="text" placeholder="Cognome"> 
-            <button onclick="stampa()">Invia</button>
-            <button onclick="reset()">Reset</button>
+            <input oninput="valueChange()" id="nome" type="text" placeholder="Nome"> 
+            <input oninput="valueChange()" id="cognome" type="text" placeholder="Cognome"> 
+            <button id="b1" onclick="stampa()">Invia</button>
+            <button id="b2" onclick="reset()">Reset</button>
         </div>
-
+        <div class="success" id="message">
+            <p class="testo">Dati inviati correttamente</p>
+        </div>
         <div class="stampa" id="box">
             <p id="n1" ></p> <p id="n2"></p>
         </div>
+
+       
     
     </body>
 
@@ -59,11 +63,17 @@
             const printname= document.getElementById("n1").innerHTML=name;
             const printsurname= document.getElementById("n2").innerHTML=surname;
             const div=document.getElementById("box");
+            const alert1=document.getElementById("message");
             if (div.style.display === "none") {
                 div.style.display = "block";
+                alert1.style.display= "block";
             } else {
                 div.style.display = "none";
+                alert1.style.display= "none";
             }
+            
+            
+            alert("ciao");
         
         }
         function reset(){
@@ -72,14 +82,51 @@
             const printname= document.getElementById("n1").innerHTML=name;
             const printsurname= document.getElementById("n2").innerHTML=surname;
             const div=document.getElementById("box");
-            if (div.style.display === "block") {
-                div.style.display = "none";
+            const alert=document.getElementById("message");
+            if (div.style.display === "none") {
+                div.style.display= "block";
             } else {
-                div.style.display = "block";
+                div.style.display= "none";
             }
+            if (alert.style.display === "none") {
+                alert.style.display= "block";
+            } else {
+                alert.style.display= "none";
+            }
+            this.valueChange();
         
         }
 
+        function valueChange(){
+            const name=document.getElementById("nome").value;
+            const surname= document.getElementById("cognome").value;
+            const button=document.getElementById("b1");
+            const button2=document.getElementById("b2");
+            if(name  && surname){
+                button.disabled=false;
+                button2.disabled=false;
+            } else{
+                button.disabled=true;
+                button2.disabled=true;
+            }
+        }
 
+    </script>
+
+    <script>
+
+        const name= document.getElementById("nome").value;
+        const surname= document.getElementById("cognome").value;
+        if(name==="" || surname===""){
+            console.log("almeno uno dei due campi è vuoto")
+            const button=document.getElementById("b1");
+            const button2=document.getElementById("b2");
+            console.log(button)
+            button.disabled=true;
+            button2.disabled=true;
+
+        }
+        
+       
     </script>
 </html>
