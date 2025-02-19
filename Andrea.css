@@ -55,4 +55,27 @@ ul{
     height: 200px;
     margin-top: 16px;
     margin-block-end:-4px;
+}.bottone{
+    border: 5px solid #140101;
+    padding: 5px;
+}.nc{
+    border: 5px solid #140101;
+    padding: 5px;
+}.testo{
+    border: 5px solid #140101;
+    padding: 5px;
+}.color{
+    background-color: rgb(229, 131, 11);
+  
+}.corretto{
+    background-color: rgb(247, 239, 27);
+    border: 5px solid #140101;
+    padding: 5px;
+    align-items: center;
+    margin-top: -4px;
+    margin-block-end:-4px;
+}
+
+#message{
+    display: none;
 }
