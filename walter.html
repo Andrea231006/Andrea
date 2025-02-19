@@ -69,13 +69,11 @@
     }
 
     function reset(){
-
-      const nome=document.getElementById('nome')
-      const cognome=document.getElementById('cognome')
+      nome.value = ''
+      cognome.value = ''
       document.getElementById('stampaNome').innerHTML=''
       document.getElementById('stampaCognome').innerHTML=''
-      document.getElementById('stampamessaggio').innerHTML=""
-
+      document.getElementById('stampamessaggio').innerHTML=''
     }
 
     function messaggio(){
