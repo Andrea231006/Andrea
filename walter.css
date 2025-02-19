@@ -4,42 +4,78 @@ body{
 
     font-size: 110%;
     background-color: rgb(199, 189, 181);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana;
 }
 h1{
-
+    margin: 20px;
+    border: 7.5px solid #140101;
     font-size: 200%;
     font-family: Verdana;
+    background-color: rgb(217, 218, 206);
+}
+
+h2{
+    margin: 20px;
+    border: 7.5px solid #140101;
+    font-size: 200%;
+    font-family: Verdana;
+    background-color: rgb(217, 218, 206);
 }
 
 li{
-
+    margin: 10px;
     text-align: center;
 }
 .flex_container{
-
+    font-style: verdana;
+    margin: 20px;
     display:flex;
     justify-content: center;
     border: 10px solid rgb(8, 1, 1);
-    background-color: rgb(6, 143, 97);
-    font-size: 150%;
+    background-color: rgb(217, 218, 206);
+    font-size: 250%;
 
 
 }
 
 .css_logo{
-
+    margin: 20px;
+    border: 15px solid #140101;
     width: 300px;
-    height: 250px
+    height: 250px;
+    margin-left: 20%;
 }
 
 .html_logo{
+    margin: 20px;
+    border: 15px solid #140101;
     width: 300px;
     height: 250px
 }
 
 .git_logo{
-
+    margin: 20px;
+    border: 15px solid #140101;
     width: 400px;
     height: 250px
+}
+
+
+.testo{
+    font-size: 150%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    border: 7.5px solid #140101;
+    padding: 5px;
+    background-color: rgb(217, 218, 206);
+}
+
+.dati{
+    font-size: 150%;
+    margin: 20px;
+    display: flex;
+    border: 5px solid #140101;
+    padding: 5px;
+    background-color: rgb(217, 218, 206);
 }

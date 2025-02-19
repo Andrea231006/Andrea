@@ -2,7 +2,13 @@
   <link rel="stylesheet"href="walter.css">
   <title> Argomenti dello stagista </title>
 
+  
+
   <body>
+    
+    
+
+
 <h1>Cosa stiamo studiando?</h1>
     <h2> 
       Durante questo PCTO presso <a href="https://icubed.it/it/"  target="_blank">icubed</a> stiamo trattando diversi argomenti tra cui:
@@ -14,12 +20,69 @@
         <li>GIT/GITHUB</li>
       </ul>
       <img src="" alt="">
-    </div>
+
 <img src="immagini/csslogo.png" class="css_logo">
 <img src="immagini/htmllogo.png" class="html_logo">
 <img src="immagini/gitlogo.png" class="git_logo">
+</div>
+
+
+<div class="testo"> 
+ 
+    <p>Inserisci nome e cognome dello stagista:</p>
+
+
+
+  <input type="text" id="nome" placeholder=nome>
+  <input type="text" id="cognome" placeholder=Cognome>
+  <button onclick="continua(), messaggio()">continua</button>
+  <button onclick="reset()">reset</button>
+  
+</div>
+  
+  
+  <div class="dati">
+
+   <p> Nome e cognome: </p>
+   <p id="stampaNome"nome></p>
+   <p id="stampaCognome"cognome></p>
+   <p id="stampamessaggio"messaggio></p>
+
+  </div>
 
 
   </body>
-  
+  <script>
+
+
+
+
+    function continua(){
+      const nome=document.getElementById('nome').value
+      const cognome=document.getElementById('cognome').value
+      console.log('mi chiamo ' + nome + ' ' + cognome)
+      document.getElementById('stampaNome').innerHTML=nome
+      document.getElementById('stampaCognome').innerHTML=cognome
+
+      
+
+    }
+
+    function reset(){
+
+      const nome=document.getElementById('nome')
+      const cognome=document.getElementById('cognome')
+      document.getElementById('stampaNome').innerHTML=''
+      document.getElementById('stampaCognome').innerHTML=''
+      document.getElementById('stampamessaggio').innerHTML=""
+
+    }
+
+    function messaggio(){
+
+      document.getElementById('stampamessaggio').innerHTML="Dati inviati correttamente😊"
+
+    }
+
+    </script>
 </html>
