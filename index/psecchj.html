@@ -31,6 +31,55 @@
             <img class="img1" src="assets/html-css.jpg" width="400"  >
             <img class="img2" src="assets/images.png" width="400" height="193"  >
         </div>
+
+        <div class="form">
+            <input   id="nome" type="text" placeholder="Nome"> 
+            <input   id="cognome" type="text" placeholder="Cognome"> 
+            <button onclick="stampa()">Invia</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+
+        <div class="stampa" id="box">
+            <p id="n1" ></p> <p id="n2"></p>
+        </div>
     
     </body>
+
+
+
+
+
+    <script>
+
+        
+        function stampa(){
+            const name= document.getElementById("nome").value;
+            const surname= document.getElementById("cognome").value;
+            console.log(name, surname);
+            const printname= document.getElementById("n1").innerHTML=name;
+            const printsurname= document.getElementById("n2").innerHTML=surname;
+            const div=document.getElementById("box");
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        
+        }
+        function reset(){
+            const name= document.getElementById("nome").value="";
+            const surname= document.getElementById("cognome").value="";
+            const printname= document.getElementById("n1").innerHTML=name;
+            const printsurname= document.getElementById("n2").innerHTML=surname;
+            const div=document.getElementById("box");
+            if (div.style.display === "block") {
+                div.style.display = "none";
+            } else {
+                div.style.display = "block";
+            }
+        
+        }
+
+
+    </script>
 </html>
