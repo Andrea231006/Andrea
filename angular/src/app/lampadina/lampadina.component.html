@@ -1,0 +1,13 @@
+<div class="lampadinaspenta" [ngStyle]="{'background': color}" [ngClass]="!on ? 'lampadinaspenta' : 'lampeggia'">
+    <div class="filamento"></div>
+    <div class="base"></div>
+   
+</div>
+<div style="padding-top: 50px; text-align:center">
+    <input type="color" id="favcolor" name="favcolor" [disabled]="!toggleValue" [(ngModel)]="color">
+</div>
+
+<div style="text-align: center;">
+    <p><mat-slide-toggle [disabled]="!toggleValue" (change)="lampeggia($event)" [(ngModel)]="on">{{on ? 'start' : 'stop'}}</mat-slide-toggle></p>
+
+</div>

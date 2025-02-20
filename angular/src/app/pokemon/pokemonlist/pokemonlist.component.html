@@ -1,0 +1,44 @@
+<p>pokemonlist works!</p>
+
+
+<button (click)="open()">
+    @if (isOpen) {
+        <span>spegni</span>
+    } 
+    @else {
+        <span>accendi</span>
+    }
+</button>
+
+
+     
+
+
+@if (isOpen) {
+    <p>acceso</p>
+} @else{
+    <p>spento</p>
+}
+
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Cognome</th>
+        <th scope="col">Eta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of persona">
+        <th scope="row">1</th>
+        <td>{{p.nome}}</td>
+        <td>{{p.cognome}}</td>
+        <td>{{p.eta}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+

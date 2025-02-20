@@ -1,0 +1,17 @@
+<div>
+    <p><mat-slide-toggle (change)="accendi($event)">{{on ? 'acceso' : 'spento'}}</mat-slide-toggle></p>
+
+</div>
+<p>{{message}}</p>
+
+<div class="cont">
+<app-lampadina [toggleValue]="on" (sendMessage)="getMessage($event)"></app-lampadina>
+<app-lampadina [toggleValue]="on" (sendMessage)="getMessage($event)"></app-lampadina>
+<app-lampadina [toggleValue]="on" (sendMessage)="getMessage($event)"></app-lampadina>
+<app-lampadina [toggleValue]="on" (sendMessage)="getMessage($event)"></app-lampadina>
+<app-lampadina [toggleValue]="on" (sendMessage)="getMessage($event)"></app-lampadina>
+<app-lampadina [toggleValue]="on" (sendMessage)="getMessage($event)"></app-lampadina>
+<app-lampadina [toggleValue]="on" (sendMessage)="getMessage($event)"></app-lampadina>
+<app-lampadina [toggleValue]="on" (sendMessage)="getMessage($event)"></app-lampadina>
+
+</div>
