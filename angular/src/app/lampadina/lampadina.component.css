@@ -1,0 +1,49 @@
+
+
+        .lampadina {
+            position: relative;
+            width: 80px;
+            height: 120px;
+            background: yellow;
+            border-radius: 50% 50% 40% 40%;
+            box-shadow: 0 0 20px black;
+        }
+        .lampadinaspenta{
+            position: relative;
+            width: 80px;
+            height: 120px;
+            background: white;
+            border-radius: 50% 50% 40% 40%;
+            box-shadow: 0 0 20px black;
+        }
+        .filamento {
+            position: absolute;
+            top: 85px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: black;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .base {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 30px;
+            height: 40px;
+            background: gray;
+            border-radius: 5px;
+            transform: translateX(-50%);
+        }
+
+        @keyframes blink-bg {
+            0% { background-color: rgb(60, 255, 0); }
+            50% { background-color: transparent; }
+            100% { background-color: rgb(0, 255, 123); }
+        }
+        
+        .lampeggia{
+            animation: blink-bg 1s infinite;
+        }
